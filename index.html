@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone-mall</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-11/12 mx-auto">
+    <nav>
+      <div class="navbar bg-base-100 py-3">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl text-white">PhoneMall</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Item 1</a></li>
+            <li>
+              <details>
+                <summary>Parent</summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn bg-[#FF6500] text-white">Button</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- search -->
+    <div class="flex justify-center items-center gap-2 mt-5">
+      <input id="search"
+        type="text"
+        placeholder="Enter the phone name"
+        class="input input-bordered input-primary w-full max-w-xs"
+      />
+      <button id="btn-click" class="btn bg-[#FF6500] text-white">Search</button>
+    </div>
+
+    <!-- phone Container -->
+    <div
+      id="phone-container"
+      class="py-5 grid gap-3 grid-cols-1 md:grid-cols-3"
+    ></div>
+    <div>
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="my-modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="modal-text">
+
+          </div>
+            <form method="dialog ">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </div>
+    <!-- show more button -->
+    <div class="text-center py-5">
+      <button onclick="showAll()" id="showmore" class="btn bg-[#FF6500] text-white">
+        Show more
+      </button>
+    </div>
+    <!-- footer -->
+
+    <script src="./app.js"></script>
+  </body>
+</html>
